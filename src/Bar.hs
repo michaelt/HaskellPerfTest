@@ -9,7 +9,7 @@ import Control.DeepSeq
 import Factored
 import Foo
 
-newtype Bar t (m :: Factored) = Bar (t m) deriving (NFData)
+newtype Bar t (m :: Factored) = Bar {getBar :: t m} deriving (NFData)
 
 {-# SPECIALIZE bar :: (Fact m) => Bar Foo m -> Bar Foo m #-}
 {-# INLINABLE bar #-}

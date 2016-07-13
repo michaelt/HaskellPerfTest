@@ -14,11 +14,12 @@ import Data.Tagged
 
 import Factored
 
-newtype Foo (m :: Factored) = Foo Int64 deriving (NFData)
+newtype Foo (m :: Factored) = Foo {getFoo :: Int64} deriving (NFData)
+
+instance Show (Foo m) where show (Foo n) = "Foo " ++ show n
 
 class T t where
   t :: (Fact m ) => t m -> t m
-
 instance T Foo where
   t = foo
   {-# INLINABLE t #-}

@@ -15,6 +15,7 @@ executable bench-test
   build-depends:
     base,
     criterion,
-    deepseq >= 1.4.1.1 && <1.5,
-    singletons >= 1.1.2.1 && < 2.2,
-    tagged
+    deepseq >= 1.4.1.1,
+    singletons >= 1.1.2.1,
+    tagged,
+    vector

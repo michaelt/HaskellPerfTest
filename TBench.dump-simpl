@@ -1,0 +1,259 @@
+
+==================== Tidy Core ====================
+2016-07-13 02:20:57.281410183 UTC
+
+Result size of Tidy Core = {terms: 129, types: 681, coercions: 440}
+
+-- RHS size: {terms: 2, types: 0, coercions: 0}
+$trModule2 :: TrName
+[GblId,
+ Caf=NoCafRefs,
+ Str=DmdType m1,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 30 20}]
+$trModule2 = TrNameS "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0}
+$trModule1 :: TrName
+[GblId,
+ Caf=NoCafRefs,
+ Str=DmdType m1,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 40 20}]
+$trModule1 = TrNameS "TBench"#
+
+-- RHS size: {terms: 3, types: 0, coercions: 0}
+$trModule :: Module
+[GblId,
+ Caf=NoCafRefs,
+ Str=DmdType m,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 30}]
+$trModule = Module $trModule2 $trModule1
+
+-- RHS size: {terms: 2, types: 0, coercions: 0}
+benches15 :: [Char]
+[GblId,
+ Str=DmdType,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=False, ConLike=False,
+         WorkFree=False, Expandable=False, Guidance=IF_ARGS [] 40 0}]
+benches15 = unpackCString# "T"#
+
+-- RHS size: {terms: 3, types: 4, coercions: 7}
+benches14 :: R:SingBinz ('D0 'B1)
+[GblId,
+ Str=DmdType,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 30}]
+benches14 = SD0 ($fSingIBinD0_$d~~ `cast` ...) $fSingIBinB1_$s$WSB1
+
+-- RHS size: {terms: 3, types: 7, coercions: 13}
+benches13 :: R:SingPrimeBinz ('P ('D0 'B1))
+[GblId,
+ Str=DmdType,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 30}]
+benches13 =
+  SP ($fSingIPrimeBinP_$d~~ `cast` ...) (benches14 `cast` ...)
+
+-- RHS size: {terms: 3, types: 4, coercions: 7}
+benches12 :: R:SingPosz ('S 'O)
+[GblId,
+ Str=DmdType,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 30}]
+benches12 = SS ($fSingIPosS_$d~~ `cast` ...) $fSingIPosO_$s$WSO
+
+-- RHS size: {terms: 3, types: 7, coercions: 13}
+benches11 :: R:SingPosz ('S ('S 'O))
+[GblId,
+ Str=DmdType,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 30}]
+benches11 = SS ($fSingIPosS_$d~~ `cast` ...) (benches12 `cast` ...)
+
+-- RHS size: {terms: 3, types: 10, coercions: 16}
+benches10 :: R:SingPosz ('S ('S ('S 'O)))
+[GblId,
+ Str=DmdType,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 30}]
+benches10 = SS ($fSingIPosS_$d~~ `cast` ...) (benches11 `cast` ...)
+
+-- RHS size: {terms: 3, types: 13, coercions: 19}
+benches9 :: R:SingPosz ('S ('S ('S ('S 'O))))
+[GblId,
+ Str=DmdType,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 30}]
+benches9 = SS ($fSingIPosS_$d~~ `cast` ...) (benches10 `cast` ...)
+
+-- RHS size: {terms: 3, types: 16, coercions: 22}
+benches8 :: R:SingPosz ('S ('S ('S ('S ('S 'O)))))
+[GblId,
+ Str=DmdType,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 30}]
+benches8 = SS ($fSingIPosS_$d~~ `cast` ...) (benches9 `cast` ...)
+
+-- RHS size: {terms: 3, types: 19, coercions: 25}
+benches7 :: R:SingPosz ('S ('S ('S ('S ('S ('S 'O))))))
+[GblId,
+ Str=DmdType,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 30}]
+benches7 = SS ($fSingIPosS_$d~~ `cast` ...) (benches8 `cast` ...)
+
+-- RHS size: {terms: 4, types: 37, coercions: 45}
+benches6
+  :: R:Sing(,)z
+       PrimeBin Pos '('P ('D0 'B1), 'S ('S ('S ('S ('S ('S 'O))))))
+[GblId,
+ Str=DmdType,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 40}]
+benches6 =
+  STuple2
+    ($fSingI(,)(,)_$d~~ `cast` ...)
+    (benches13 `cast` ...)
+    (benches7 `cast` ...)
+
+-- RHS size: {terms: 3, types: 40, coercions: 48}
+benches5
+  :: R:SingPrimePowerz
+       ('PP '('P ('D0 'B1), 'S ('S ('S ('S ('S ('S 'O)))))))
+[GblId,
+ Str=DmdType,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 30}]
+benches5 =
+  SPP ($fSingIPrimePowerPP_$d~~ `cast` ...) (benches6 `cast` ...)
+
+-- RHS size: {terms: 4, types: 53, coercions: 61}
+benches4
+  :: R:Sing[]z
+       PrimePower '['PP '('P ('D0 'B1), 'S ('S ('S ('S ('S ('S 'O))))))]
+[GblId,
+ Str=DmdType,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 40}]
+benches4 =
+  SCons
+    ($fSingI[]:_$d~~ `cast` ...)
+    (benches5 `cast` ...)
+    ($fSingI[][]1 `cast` ...)
+
+-- RHS size: {terms: 3, types: 55, coercions: 62}
+benches3
+  :: R:SingFactoredz
+       ('F '['PP '('P ('D0 'B1), 'S ('S ('S ('S ('S ('S 'O))))))])
+[GblId,
+ Str=DmdType,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 30}]
+benches3 = SF ($fSingIFactoredF_$d~~ `cast` ...) (benches4 `cast` ...)
+
+-- RHS size: {terms: 2, types: 19, coercions: 25}
+benches2
+  :: Tagged
+       (FSym1 ('PP (Tuple2Sym2 ('P ('D0 'B1)) ('S ('S ('S ('S ('S ('S 'O))))))) :$$$ '[])) [PP]
+[GblId,
+ Str=DmdType,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=False, ConLike=False,
+         WorkFree=False, Expandable=True, Guidance=IF_ARGS [] 20 0}]
+benches2 = ppsFact (benches3 `cast` ...)
+
+-- RHS size: {terms: 7, types: 1, coercions: 23}
+benches_n :: Int64
+[GblId,
+ Str=DmdType,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=False, ConLike=False,
+         WorkFree=False, Expandable=False, Guidance=IF_ARGS [] 50 20}]
+benches_n =
+  case $wgo (benches2 `cast` ...) 1# of ww { __DEFAULT -> I64# ww }
+
+-- RHS size: {terms: 8, types: 5, coercions: 0}
+benches1 [InlPrag=INLINE[0]]
+  :: Int64 -> State# RealWorld -> (# State# RealWorld, () #)
+[GblId,
+ Arity=2,
+ Str=DmdType <S(S),1*U(U)><S,U>,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=2,unsat_ok=True,boring_ok=False)
+         Tmpl= \ (w [Occ=Once!] :: Int64)
+                 (w1 [Occ=Once, OS=OneShot] :: State# RealWorld) ->
+                 case w of _ [Occ=Dead] { I64# ww1 [Occ=Once] ->
+                 $wbenches ww1 w1
+                 }}]
+benches1 =
+  \ (w :: Int64) (w1 [OS=OneShot] :: State# RealWorld) ->
+    case w of _ [Occ=Dead] { I64# ww1 -> $wbenches ww1 w1 }
+
+-- RHS size: {terms: 3, types: 0, coercions: 8}
+benches :: Benchmark
+[GblId,
+ Str=DmdType m2,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 30}]
+benches = Benchmark benches15 (benches1 `cast` ...)
+
+-- RHS size: {terms: 2, types: 19, coercions: 25}
+benches_eta
+  :: Foo
+       (FSym1 '['PP '('P ('D0 'B1), 'S ('S ('S ('S ('S ('S 'O))))))])
+     -> Foo
+          (FSym1 '['PP '('P ('D0 'B1), 'S ('S ('S ('S ('S ('S 'O))))))])
+[GblId,
+ Str=DmdType,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=False, ConLike=False,
+         WorkFree=False, Expandable=True, Guidance=IF_ARGS [] 20 0}]
+benches_eta = foo (benches3 `cast` ...)
+
+-- RHS size: {terms: 7, types: 3, coercions: 21}
+$wbenches [InlPrag=[0]]
+  :: Int# -> State# RealWorld -> (# State# RealWorld, () #)
+[GblId,
+ Arity=2,
+ Str=DmdType <S,U><S,U>,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [0 0] 40 0}]
+$wbenches =
+  \ (ww :: Int#) (w [OS=OneShot] :: State# RealWorld) ->
+    $wgo12 benches_eta (benches_n `cast` ...) ww w
+
+Rec {
+-- RHS size: {terms: 30, types: 101, coercions: 0}
+$wgo12 [InlPrag=[0], Occ=LoopBreaker]
+  :: (Foo
+        (FSym1 '['PP '('P ('D0 'B1), 'S ('S ('S ('S ('S ('S 'O))))))])
+      -> Foo
+           (FSym1 '['PP '('P ('D0 'B1), 'S ('S ('S ('S ('S ('S 'O))))))]))
+     -> Foo
+          (FSym1 '['PP '('P ('D0 'B1), 'S ('S ('S ('S ('S ('S 'O))))))])
+     -> Int#
+     -> State# RealWorld
+     -> (# State# RealWorld, () #)
+[GblId,
+ Arity=4,
+ Caf=NoCafRefs,
+ Str=DmdType <L,C(U)><L,U><S,U><S,U>]
+$wgo12 =
+  \ (w :: Foo
+            (FSym1 '['PP '('P ('D0 'B1), 'S ('S ('S ('S ('S ('S 'O))))))])
+          -> Foo
+               (FSym1 '['PP '('P ('D0 'B1), 'S ('S ('S ('S ('S ('S 'O))))))]))
+    (w1
+       :: Foo
+            (FSym1 '['PP '('P ('D0 'B1), 'S ('S ('S ('S ('S ('S 'O))))))]))
+    (ww :: Int#)
+    (w2 [OS=OneShot] :: State# RealWorld) ->
+    case tagToEnum# (<=# ww 0#) of _ [Occ=Dead] {
+      False ->
+        case seq# (case w w1 of _ [Occ=Dead] { __DEFAULT -> () }) w2
+        of _ [Occ=Dead] { (# ipv, ipv1 #) ->
+        $wgo12 w w1 (-# ww 1#) ipv
+        };
+      True -> (# w2, () #)
+    }
+end Rec }
